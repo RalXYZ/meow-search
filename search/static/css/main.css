@@ -1,0 +1,57 @@
+body {
+    background-color: var(--background)!important;
+    color: var(--secondary);
+}
+
+form div button {
+    background-color: var(--secondary)!important;
+    border-color: var(--secondary)!important;
+}
+
+.card {
+    background-color: var(--foreground)!important;
+    border-radius: 10px!important;
+}
+.card a {
+    color: var(--title);
+}
+.card h6 {
+    color: var(--h2);
+}
+.card p {
+    color: var(--text);
+}
+
+#search-bar {
+    background-color: var(--border)!important;
+    border-radius: 5px;
+}
+
+.title-bar {
+    background-color: var(--secondary);
+    border-radius: 10px;
+}
+.title-bar h1 {
+    font-size: 25px;
+}
+.title-bar h5 {
+    font-size: 15px;
+    text-align: center;
+    color: var(--h2);
+}
+.title-content-bar {
+    background-color: var(--border);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+
+.t-hover-shadow {
+    transition: transform .2s ease-in-out, box-shadow .2s cubic-bezier(.47, 0, .745, .715), border .2s linear .1s;
+}
+
+.t-hover-shadow:hover {
+    box-shadow: 2px 2px 7px var(--h2);
+}

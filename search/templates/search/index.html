@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <link rel="stylesheet" href="{% static "homepage/bootstrap/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "homepage/css/Navigation-Clean.css" %}">
+    <link rel="stylesheet" href="{% static "homepage/css/styles.css" %}">
+    <title>{{ keyword }} - Meow Search</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body style="--background:#dde3ec; --foreground:#eff2fa; --accent:#FFEB3B; --secondary:#bed0ea; --border:#9eaec4; --title:#51637b; --h2:#7792bb; --text:#768292;">
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+        <div class="container">
+            <form action="" method = "get">
+                <div class="container">
+                    <input id="keyword" name="keyword" type="search" value="{{ keyword }}">
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </nav>
+
+    {% if keyword == '' %}
+        <p>You cannot search an empty string.</p>
+    {% else %}
+        {% if result %}
+            {% for element in result %}
+                <div class="t-hover-shadow" style="margin: 10px 100px; max-width: 840px; min-width: 600px; border-radius: 10px">
+                    <div class="card">
+                        <div class="card-body">
+                            <a class="card-link title" href="/article/{{ element.id }}/">{{ element.title }}</a>
+                            <h6 class="card-subtitle mb-2" style="padding-top: 10px">{{ element.source }}</h6>
+                            <p class="card-text simplified-content">{{ element.content | safe }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No search result of "{{ keyword }}"</p>
+        {% endif %}
+    {% endif %}
+
+    <script src="{% static "js/search.js" %}"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+.idea
+data
+collected_static
+uwsgi_params
+uwsgi.ini
+db.sqlite3
+**/__pycache__

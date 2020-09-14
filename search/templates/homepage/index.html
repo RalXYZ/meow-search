@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Meow Search</title>
+    <meta name="description" content="Football news⚽" />
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <link rel="stylesheet" href="{% static "homepage/bootstrap/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "homepage/css/Navigation-Clean.css" %}">
+    <link rel="stylesheet" href="{% static "homepage/css/styles.css" %}">
+</head>
+
+<body style="--background:#dde3ec; --foreground:#eff2fa; --accent:#FFEB3B; --secondary:#bed0ea; --border:#9eaec4">
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+        <div class="container">
+            <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">First Item</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Second Item</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Third Item</a></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Dropdown </a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <img class="mx-auto d-block img-fluid" src="{% static "homepage/img/logo.jpg" %}" alt="Responsive image" style="max-width: 15%;padding-top: 109px;">
+    <form action="search" method = "get" class="form-group mx-auto" style="max-width: 700px;padding: 0 50px;margin-top: 30px;">
+        <div class="container t-hover-shadow" id="search-bar" style="padding: 5px 5px 5px 30px">
+            <input name="keyword" type="search" class="form-control mr-sm-2 mx-auto d-block" placeholder="Search something..." style="margin: 0 100px;">
+        </div>
+        <div class="container" style="padding-top: 25px;">
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <button class="btn btn-primary my-2 my-sm-0" type="submit" style="margin: 10px">Meow Search</button>
+                <button class="btn btn-primary my-2 my-sm-0" style="margin: 10px">I'm feeling lucky</button>
+            </div>
+        </div>
+    </form>
+    <script src="{% static "homepage/js/jquery.min.js" %}"></script>
+    <script src="{% static "homepage/bootstrap/js/bootstrap.min.js" %}"></script>
+</body>
+
+</html>

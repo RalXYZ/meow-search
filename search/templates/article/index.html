@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <link rel="stylesheet" href="{% static "homepage/bootstrap/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "homepage/css/Navigation-Clean.css" %}">
+    <link rel="stylesheet" href="{% static "homepage/css/styles.css" %}">
+    <title>{{ result.title }}</title>
+</head>
+<body style="--background:#dde3ec; --foreground:#eff2fa; --accent:#FFEB3B; --secondary:#bed0ea; --border:#9eaec4; --title:#51637b; --h2:#7792bb; --text:#768292;">
+    <div style="margin: 20px 100px; max-width: 1000px">
+        <div class="title-bar" style="height: 100px; margin: 20px 0;">
+            <div class="title-content-bar" style="height: 75px;">
+                <h1>{{ result.title }}</h1>
+            </div>
+            <h5>{{ result.source }} {{ result.time }}</h5>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <p>{{ result.content | safe }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
