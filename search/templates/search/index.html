@@ -15,9 +15,10 @@
     <nav class="navbar navbar-light navbar-expand-md navigation-clean">
         <div class="container">
             <form action="" method = "get">
-                <div class="container">
-                    <input id="keyword" name="keyword" type="search" value="{{ keyword }}">
-                    <button type="submit">Search</button>
+                <div class="container" style="display: inline-block;">
+                    <!--<input id="keyword" name="keyword" type="search" > -->
+                    <input id="keyword" name="keyword" type="search" value="{{ keyword }}" class="mx-auto" placeholder="Search something..." style="margin: 0 100px; display: inline;">
+                    <button type="submit" style="display: inline">Search</button>
                 </div>
             </form>
         </div>
@@ -29,7 +30,7 @@
         {% if result %}
             {% for element in result %}
                 <div class="t-hover-shadow" style="margin: 10px 100px; max-width: 840px; min-width: 600px; border-radius: 10px">
-                    <div class="card">
+                    <div class="search-card">
                         <div class="card-body">
                             <a class="card-link title" href="/article/{{ element.id }}/">{{ element.title }}</a>
                             <h6 class="card-subtitle mb-2" style="padding-top: 10px">{{ element.source }}</h6>

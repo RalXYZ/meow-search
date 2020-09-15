@@ -8,18 +8,22 @@ form div button {
     border-color: var(--secondary)!important;
 }
 
-.card {
+.search-card, .article-card {
     background-color: var(--foreground)!important;
     border-radius: 10px!important;
 }
-.card a {
+.search-card a {
     color: var(--title);
 }
-.card h6 {
+.search-card h6 {
     color: var(--h2);
 }
-.card p {
+.search-card p {
     color: var(--text);
+}
+.article-card p {
+    font-size: 20px;
+    /* text-indent: 2em; */
 }
 
 #search-bar {
