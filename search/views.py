@@ -28,9 +28,11 @@ def search(request):
             first_exist_position = element.content.find(keyword)
             if first_exist_position == -1:
                 first_exist_position += 1
-            previous_space = find_nearest(element.content, ' ', first_exist_position)
-            previous_dot = find_nearest(element.content, '。', first_exist_position)
-            start_position = max([previous_dot, previous_space])
+            find_list = [' ', '。', '！']
+            previous_punct_position = []
+            for ele in find_list:
+                previous_punct_position.append(find_nearest(element.content, ele, first_exist_position))
+            start_position = max(previous_punct_position)
             element.content = element.content[start_position:start_position + 50]
     return render(request, 'search/index.html', {'result': result, 'keyword': keyword})
 
