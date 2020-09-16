@@ -5,7 +5,6 @@ from .models import Result
 def article(request, article_id):
     result = get_object_or_404(Result, pk=article_id)
     return render(request, 'article/index.html', {'result': result})
-    # return HttpResponse('你正在查看 %s 号文章' % article_id)
 
 
 def search(request):

@@ -1,11 +1,21 @@
+:root {
+    --background:#dde3ec;
+    --foreground:#eff2fa;
+    --accent:#FFEB3B;
+    --bar:#bed0ea;
+    --border:#9eaec4;
+    --h2:#7792bb;
+    --title:#51637b;
+    --text:#768292;
+}
 body {
     background-color: var(--background)!important;
-    color: var(--secondary);
+    color: var(--bar);
 }
 
 form div button {
-    background-color: var(--secondary)!important;
-    border-color: var(--secondary)!important;
+    background-color: var(--bar)!important;
+    border-color: var(--bar)!important;
 }
 
 .search-card, .article-card {
@@ -32,7 +42,7 @@ form div button {
 }
 
 .title-bar {
-    background-color: var(--secondary);
+    background-color: var(--bar);
     border-radius: 10px;
 }
 .title-bar h1 {
@@ -58,4 +68,6 @@ form div button {
 
 .t-hover-shadow:hover {
     box-shadow: 2px 2px 7px var(--h2);
+    background-color: #7792bb!important;
+    border-color: #7792bb!important;
 }
