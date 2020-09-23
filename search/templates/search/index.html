@@ -14,11 +14,13 @@
 <body>
     <nav class="navbar navbar-light navbar-expand-md navigation-clean">
         <div class="container">
-            <form action="" method = "get">
-                <div class="container" style="display: inline-block;">
+            <form action="" method="get" style="width: 425px;">
+                <div class="container">
                     <!--<input id="keyword" name="keyword" type="search" > -->
-                    <input id="keyword" name="keyword" type="search" value="{{ keyword }}" class="mx-auto" placeholder="Search something..." style="margin: 0 100px; display: inline;">
-                    <button type="submit" style="display: inline">Search</button>
+                    <div class="container t-hover-shadow" id="search-bar" style="padding: 5px 5px 5px 30px; width: 300px; margin: 0;">
+                        <input id="keyword" name="keyword" type="search" value="{{ keyword }}" class="form-control mr-sm-2 mx-auto d-block" placeholder="Search something..." style="margin: 0 100px;">
+                    </div>
+                    <button type="submit" class="btn btn-primary my-2 my-sm-0 t-hover-shadow">Search</button>
                 </div>
             </form>
         </div>
