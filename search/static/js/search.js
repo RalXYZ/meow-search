@@ -9,3 +9,8 @@ window.onload = () => {
         })
     })
 }
+
+function changeTheme() {
+    hue = document.getElementById("theme-range").value;
+    document.documentElement.style.setProperty('--main-hue', hue);
+}

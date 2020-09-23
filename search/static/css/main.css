@@ -1,35 +1,35 @@
 :root {
-    --background:#dde3ec;
-    --foreground:#eff2fa;
-    --accent:#FFEB3B;
-    --bar:#bed0ea;
-    --border:#9eaec4;
-    --h2:#7792bb;
-    --title:#51637b;
-    --text:#768292;
+    --main-hue: 216;  /* 216 */
+    --background: hsl(var(--main-hue),28.3%,89.6%);
+    --card-background: hsl(var(--main-hue),52.4%,95.9%);
+    --button-normal: hsl(var(--main-hue),51.2%,83.1%);
+    --border: hsl(var(--main-hue),24.4%,69.4%);
+    --result-subtitle: hsl(var(--main-hue),33.3%,60%);
+    --result-title: hsl(var(--main-hue),20.6%,40%);
+    --result-text: hsl(var(--main-hue),11.4%,51.8%);
 }
 body {
     background-color: var(--background)!important;
-    color: var(--bar);
+    /* color: var(--bar); */
 }
 
 form div button {
-    background-color: var(--bar)!important;
-    border-color: var(--bar)!important;
+    background-color: var(--button-normal)!important;
+    border-color: var(--button-normal)!important;
 }
 
 .search-card, .article-card {
-    background-color: var(--foreground)!important;
+    background-color: var(--card-background)!important;
     border-radius: 10px!important;
 }
 .search-card a {
-    color: var(--title);
+    color: var(--result-title);
 }
 .search-card h6 {
-    color: var(--h2);
+    color: var(--result-subtitle);
 }
 .search-card p {
-    color: var(--text);
+    color: var(--result-text);
 }
 .article-card p {
     font-size: 20px;
@@ -42,7 +42,7 @@ form div button {
 }
 
 .title-bar {
-    background-color: var(--bar);
+    background-color: var(--button-normal);
     border-radius: 10px;
 }
 .title-bar h1 {
@@ -51,7 +51,7 @@ form div button {
 .title-bar h5 {
     font-size: 15px;
     text-align: center;
-    color: var(--h2);
+    color: var(--result-subtitle);
 }
 .title-content-bar {
     background-color: var(--border);
@@ -67,7 +67,7 @@ form div button {
 }
 
 .t-hover-shadow:hover {
-    box-shadow: 2px 2px 7px var(--h2);
-    background-color: #7792bb!important;
-    border-color: #7792bb!important;
+    box-shadow: 2px 2px 7px var(--result-subtitle);
+    background-color: var(--result-text)!important;
+    border-color: var(--result-text)!important;
 }

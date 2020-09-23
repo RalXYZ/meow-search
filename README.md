@@ -10,7 +10,7 @@ Note that this project is currently under development, and is unstable. For secu
 - [x] Keyword highlight
 - [ ] Content peek optimization
 - [ ] Theme change button
-- [ ] Search bar optimization
+- [x] Search bar optimization
 
 
 
