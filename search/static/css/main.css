@@ -1,12 +1,13 @@
 :root {
-    --main-hue: 216;  /* 216 */
-    --background: hsl(var(--main-hue),28.3%,89.6%);
-    --card-background: hsl(var(--main-hue),52.4%,95.9%);
-    --button-normal: hsl(var(--main-hue),51.2%,83.1%);
-    --border: hsl(var(--main-hue),24.4%,69.4%);
-    --result-subtitle: hsl(var(--main-hue),33.3%,60%);
-    --result-title: hsl(var(--main-hue),20.6%,40%);
-    --result-text: hsl(var(--main-hue),11.4%,51.8%);
+    --main-hue: 216;
+    --background: hsl(var(--main-hue), 28.3%, 89.6%);
+    --card-background: hsl(var(--main-hue), 52.4%, 95.9%);
+    --button-normal: hsl(var(--main-hue), 45%, 70%);
+    --button-hover: hsl(var(--main-hue), 65%, 70%);
+    --border: hsl(var(--main-hue), 24.4%, 69.4%);
+    --result-subtitle: hsl(var(--main-hue), 33.3%, 60%);
+    --result-title: hsl(var(--main-hue), 20.6%, 40%);
+    --result-text: hsl(var(--main-hue), 11.4%, 51.8%);
 }
 body {
     background-color: var(--background)!important;
@@ -37,8 +38,34 @@ form div button {
 }
 
 #search-bar {
-    background-color: var(--border)!important;
+    background-color: var(--button-normal)!important;
     border-radius: 5px;
+}
+
+.theme-hue-btn {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: transparent;
+    -webkit-appearance: none;
+    outline: 0!important;
+    margin: 5px;
+}
+
+#theme-hue-btn-0 {
+    background-color: hsl(0, 60%, 70%);
+}
+#theme-hue-btn-1 {
+    background-color: hsl(60, 60%, 70%);
+}
+#theme-hue-btn-2 {
+    background-color: hsl(120, 60%, 70%);
+}
+#theme-hue-btn-3 {
+    background-color: hsl(180, 60%, 70%);
+}
+#theme-hue-btn-4 {
+    background-color: hsl(240, 60%, 70%);
 }
 
 .title-bar {
@@ -60,14 +87,12 @@ form div button {
     padding: 20px 0;
 }
 
-
-
 .t-hover-shadow {
     transition: transform .2s ease-in-out, box-shadow .2s cubic-bezier(.47, 0, .745, .715), border .2s linear .1s;
 }
 
 .t-hover-shadow:hover {
     box-shadow: 2px 2px 7px var(--result-subtitle);
-    background-color: var(--result-text)!important;
-    border-color: var(--result-text)!important;
+    background-color: var(--button-hover)!important;
+    border-color: var(--button-hover)!important;
 }

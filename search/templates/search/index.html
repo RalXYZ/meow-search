@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{% static "homepage/css/Navigation-Clean.css" %}">
     <link rel="stylesheet" href="{% static "homepage/css/styles.css" %}">
     <title>{{ keyword }} - Meow Search</title>
+    <script src="{% static "js/init.js" %}"></script>
 </head>
 
 <body>
@@ -22,7 +23,14 @@
                     <button type="submit" class="btn btn-primary my-2 my-sm-0 t-hover-shadow">Search</button>
                 </div>
             </form>
-            <input type="range" id="theme-range" name="theme" min="0" max="360" step="1" onmousemove="changeTheme()"/><span id="changeTheme"></span>
+            <!--<input type="range" id="theme-range" name="theme" min="0" max="360" step="60" onmousedown="changeTheme()"/>-->
+            <div>
+                <button class="theme-hue-btn" id="theme-hue-btn-0"></button>
+                <button class="theme-hue-btn" id="theme-hue-btn-1"></button>
+                <button class="theme-hue-btn" id="theme-hue-btn-2"></button>
+                <button class="theme-hue-btn" id="theme-hue-btn-3"></button>
+                <button class="theme-hue-btn" id="theme-hue-btn-4"></button>
+            </div>
         </div>
     </nav>
 
@@ -46,6 +54,7 @@
         {% endif %}
     {% endif %}
 
+    <script src="{% static "js/theme.js" %}"></script>
     <script src="{% static "js/search.js" %}"></script>
 </body>
 </html>
