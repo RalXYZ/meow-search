@@ -8,10 +8,10 @@
     --result-subtitle: hsl(var(--main-hue), 33.3%, 60%);
     --result-title: hsl(var(--main-hue), 20.6%, 40%);
     --result-text: hsl(var(--main-hue), 11.4%, 51.8%);
+    --light-color: hsl(var(--main-hue), 100%, 90%);
 }
 body {
     background-color: var(--background)!important;
-    /* color: var(--bar); */
 }
 
 form div button {
@@ -56,7 +56,7 @@ form div button {
     background-color: hsl(0, 60%, 70%);
 }
 #theme-hue-btn-1 {
-    background-color: hsl(60, 60%, 70%);
+    background-color: hsl(50, 70%, 70%);
 }
 #theme-hue-btn-2 {
     background-color: hsl(120, 60%, 70%);
@@ -68,8 +68,12 @@ form div button {
     background-color: hsl(240, 60%, 70%);
 }
 
+#keyword {
+    /* outline-color: var(--button-normal); */
+}
+
 .title-bar {
-    background-color: var(--button-normal);
+    background-color: var(--button-hover);
     border-radius: 10px;
 }
 .title-bar h1 {
@@ -78,10 +82,11 @@ form div button {
 .title-bar h5 {
     font-size: 15px;
     text-align: center;
-    color: var(--result-subtitle);
+    margin-top: 3px;
+    color: var(--light-color);
 }
 .title-content-bar {
-    background-color: var(--border);
+    background-color: var(--button-normal);
     border-radius: 10px;
     text-align: center;
     padding: 20px 0;

@@ -43,20 +43,20 @@
     <img class="mx-auto d-block img-fluid" src="{% static "homepage/img/logo.jpg" %}" alt="Responsive image" style="max-width: 15%;padding-top: 109px;">
     <form action="search" method = "get" class="form-group mx-auto" style="max-width: 700px;padding: 0 50px;margin-top: 30px;">
         <div class="container t-hover-shadow" id="search-bar" style="padding: 5px 5px 5px 30px">
-            <input name="keyword" type="search" class="form-control mr-sm-2 mx-auto d-block" placeholder="Search something..." style="margin: 0 100px;">
+            <input id="keyword" name="keyword" type="search" class="form-control mr-sm-2 mx-auto d-block" placeholder="Search something..." style="margin: 0 100px;">
         </div>
         <div class="container" style="padding-top: 25px;">
             <div style="display: flex; justify-content: center; align-items: center;">
                 <button class="btn btn-primary my-2 my-sm-0 t-hover-shadow" type="submit" style="margin: 10px">Meow Search</button>
-                <button class="btn btn-primary my-2 my-sm-0 t-hover-shadow" style="margin: 10px">I'm feeling lucky</button>
-
+                <button id="feeling_lucky" class="btn btn-primary my-2 my-sm-0 t-hover-shadow" type="button" style="margin: 10px">I'm feeling lucky</button>
             </div>
         </div>
     </form>
     <script src="{% static "js/easter_egg.js" %}"></script>
     <script src="{% static "js/theme.js" %}"></script>
+    <script src="{% static "js/feeling_lucky.js" %}"></script>
     <script src="{% static "homepage/js/jquery.min.js" %}"></script>
-    <script src="{% static "homepage/bootstrap/js/bootstrap.min.js" %}"></script>
+
 </body>
 
 </html>

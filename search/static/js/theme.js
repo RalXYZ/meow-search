@@ -4,7 +4,7 @@ document.getElementById("theme-hue-btn-0").onclick = () => {
     localStorage.setItem('themeHue', hue.toString());
 }
 document.getElementById("theme-hue-btn-1").onclick = () => {
-    let hue = 60;
+    let hue = 50;
     document.documentElement.style.setProperty('--main-hue', hue);
     localStorage.setItem('themeHue', hue.toString());
 }

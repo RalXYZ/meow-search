@@ -2,6 +2,7 @@
 data
 collected_static
 uwsgi_params
+dev_log.md
 uwsgi.ini
 db.sqlite3
 **/__pycache__
