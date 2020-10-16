@@ -32,7 +32,7 @@ def search(request):
             for ele in find_list:
                 previous_punct_position.append(find_nearest(element.content, ele, first_exist_position))
             start_position = max(previous_punct_position)
-            if first_exist_position- start_position < 50 - len(word):
+            if first_exist_position - start_position < 50 - len(keyword):
                 element.content = element.content[start_position:start_position + 50]
             else:
                 element.content = element.content[first_exist_position - 10:first_exist_position + 40]
