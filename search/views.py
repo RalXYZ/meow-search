@@ -32,7 +32,12 @@ def search(request):
             for ele in find_list:
                 previous_punct_position.append(find_nearest(element.content, ele, first_exist_position))
             start_position = max(previous_punct_position)
-            element.content = element.content[start_position:start_position + 50]
+            if first_exist_position- start_position < 50 - len(word):
+                element.content = element.content[start_position:start_position + 50]
+            else:
+                element.content = element.content[first_exist_position - 10:first_exist_position + 40]
+                element.content = '...' + element.content
+
     return render(request, 'search/index.html', {'result': result, 'keyword': keyword})
 
 
